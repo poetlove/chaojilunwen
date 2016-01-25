@@ -1,0 +1,25 @@
+<ion-view view-title="刊物">
+  <ion-content lazy-scroll>   
+		<div class="row">
+		 	<div class="col col-40">
+		 		<ion-list>    	    	
+      			<ion-item  ng-repeat="grp in grps"  href="#/tab/chats/{{grp.id}}">		        
+							<h4>{{grp.subgroupname}}</h4> 	
+     				</ion-item>     
+    		</ion-list>
+		 	</div>
+		 	<div class="col col-70">
+					<ion-list>    	    	
+      			<ion-item class="item-avatar item-icon-right" ng-repeat="topic in topics"  href="#/tab/chats/{{topic.id}}">
+      				<img image-lazy-src="{{imgUrl}}{{topic.listitem_pic_name}}" >	
+							<h3>{{topic.title}}</h3>
+     				</ion-item>     
+    			</ion-list>
+		 	</div>
+		</div>    
+  </ion-content>
+  
+  
+  
+  
+</ion-view>
