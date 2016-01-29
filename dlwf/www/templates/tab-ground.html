@@ -1,0 +1,30 @@
+<ion-view view-title="{{currentTab|stateName}}">
+	
+  <ion-nav-buttons side="left">
+	<button class="button button-clear button-light" ng-click="openPopover($event)">区域</button>
+  </ion-nav-buttons>
+	
+	
+  <ion-content lazy-scroll>		
+
+		
+ 	<ion-list>    	    	
+      <ion-item  ng-repeat="chat in news " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
+       	<div class="item-thumbnail-left ">	
+       		<img image-lazy-src="{{chat.pic}}">	     
+        	<p>{{chat.title}}</p>
+        	<div align="right">
+        		<p>{{chat.id}}</p>            		
+        	</div>
+		</div>
+
+      </ion-item>
+    </ion-list> 
+  
+  	<!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>-->             
+    <!--<ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>-->
+    
+  </ion-content> 
+  
+</ion-view>
+

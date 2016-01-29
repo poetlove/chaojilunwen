@@ -1,0 +1,26 @@
+.img-grp{ 
+width:400px; 
+height:200px; 
+overflow-y:hidden; /*只出现水平滚动条*/ 
+position: absolute; 
+} 
+.img-pos1{ 
+position:absolute; 
+z-index:1; 
+} 
+.img-pos2{ 
+position:absolute; 
+z-index:5; 
+left:200px; 
+top:0px 
+} 
+.img-pos3{ 
+position:absolute; 
+z-index:10; 
+left:400px; 
+top:0px 
+}
+
+
+.div-inline{ display:inline} 
+

@@ -1,0 +1,99 @@
+<ion-view view-title="{{currentTab|tabName}}">
+	
+	  <ion-nav-buttons side="left">
+	    <button class="button button-clear button-light" ng-click="openPopover($event)">类别</button>
+	  </ion-nav-buttons>
+	
+	
+  <ion-content lazy-scroll>		
+	 <!--	<ion-slide-box class="slidebox" delegate-handle="slideimgs" show-pager="true"  auto-play="true" does-continue="true" slide-interval="2000" >		  
+		  <ion-slide on-slide-changed="papar(index)">
+		    <img image-lazy-src="{{imgUrl}}{{adinfos[0].adpicname}}" style="width: 100%; height: 25%" >	
+		  </ion-slide>
+		  <ion-slide>
+		    <img image-lazy-src="{{imgUrl}}{{adinfos[1].adpicname}}" style="width: 100%; height: 25%" >
+		  </ion-slide>
+		  <ion-slide>
+		    <img image-lazy-src="{{imgUrl}}{{adinfos[2].adpicname}}" style="width: 100%; height: 25%" >
+		  </ion-slide>
+		  <ion-slide>
+		    <img image-lazy-src="{{imgUrl}}{{adinfos[3].adpicname}}" style="width: 100%; height: 25%" >
+		  </ion-slide>		  
+		</ion-slide-box>-->
+		
+ 	<ion-list>    	    	
+      <ion-item  ng-repeat="chat in news " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
+       	<div ng-if="chat.type === 1" class="item-thumbnail-right ">	
+       		<img image-lazy-src="{{chat.pic}}">	     
+        	<p>{{chat.title}}</p>
+        	<div align="right">
+        		<p>{{chat.id}}</p>            		
+        	</div>
+		</div>
+			   	   	
+		<div ng-if="chat.type === 2" class="item-image list-img">
+		 	<!--<div style="left:0; top:0; color:#FFF; font-weight:bold">{{chat.title}}</div>-->
+		 	<p>{{chat.title}}</p>	
+		 	<img style="max-height: 80px;" image-lazy-src="{{chat.pic}}"> 	 	
+		</div>        	        	
+
+		<div ng-if="chat.type === 3" class="item-image list-img">
+		 	<!--<div style="left:0; top:0; color:#FFF; font-weight:bold">{{chat.title}}</div>-->
+		 	<p>{{chat.title}}</p>
+		 	
+		 		<div class="div-inline">
+		 			<img style="width: 32%; height: 70px;" image-lazy-src="{{chat.pic}}">
+		 		</div>
+		 		<div class="div-inline">
+		 			<img style="width: 32%; height: 70px;" image-lazy-src="{{chat.pic1}}">
+		 		</div>
+		 		<div class="div-inline">
+		 			<img style="width: 32%; height: 70px;" image-lazy-src="{{chat.pic2}}">
+		 		</div>		 		
+		 	
+
+
+		 	<!--<img style="max-height: 80px;" image-lazy-src="{{chat.pic}}">-->
+		 		
+		</div>   		
+       	<!--<div ng-if="chat.type">
+       		<div style="padding-left: 8px; min-height: 40px ; ">
+        		<p>{{chat.title}}</p>           		
+        	</div>        	
+        	<div align="right">
+        		<p>{{chat.id}}</p>            		
+        	</div>
+		</div>		-->
+      </ion-item>
+    </ion-list> 
+  
+  	<!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+    </ion-refresher>-->
+ 
+ 	<!--<ion-list>    	    	
+      <ion-item  ng-repeat="chat in topics " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
+       	<div ng-if="!chat.realflg" class="item-thumbnail-left ">	
+       		<img image-lazy-src="{{imgUrl}}{{chat.listitem_pic_name}}">	     
+        	<p>{{chat.title}}</p>
+        	<div align="right">
+        		<p>{{chat.createdate}}</p>            		
+        	</div>
+		</div>
+       	<div ng-if="chat.realflg">
+       		<div style="padding-left: 8px; min-height: 40px ; ">
+        		<p>{{chat.title}}</p>           		
+        	</div>        	
+        	<div align="right">
+        		<p>{{chat.createdate}}</p>            		
+        	</div>
+		</div>		
+      </ion-item>
+    </ion-list> 
+           	
+   
+    <ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>-->
+    
+  </ion-content> 
+  
+</ion-view>
+

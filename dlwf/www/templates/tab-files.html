@@ -1,0 +1,31 @@
+<ion-view view-title="约球">
+
+
+	<!--<ion-header-bar class="bar-subheader" style="padding-top: 3px;">
+	  <div class="button-bar" style="padding-top: 3px;">
+			  <a ng-click="" class="button button-small button-royal" style="margin-right: 1px;">论文指导</a>
+			  <a ng-click="" class="button button-small button-royal" style="margin-left: 1px;">论文生成器</a>
+		</div>
+	</ion-header-bar>	
+	
+  <ion-content lazy-scroll>
+    <ion-list style="padding-top: 3px;">    	    	
+      <ion-item class="item-image list-img" ng-repeat="lunwen in lunwens"  href="#/tab/chats/{{lunwen.id}}">	      	   	
+				<div style="position:relative">
+				 	<div style="position:absolute; left:0; top:0; color:#FFF; font-weight:bold">{{lunwen.typename}}</div> 
+				 	<img  image-lazy-src="{{imgUrl}}{{lunwen.picname}}" image-lazy-loader="circles"> 
+				</div>        	        	
+      </ion-item>      
+    </ion-list>-->
+  <ion-content scroll>    
+		<div class="button-bar" style="padding-top: 49px;">
+  		<a  class="button " style="height: 100px" >球队状态</a>
+		</div>
+		<div class="button-bar" style="padding-top: 5px;">
+  		<a class="button " style="height: 100px" >约对手</a>
+		</div>    
+		<div class="button-bar" style="padding-top: 5px;">
+  		<a href="#/tab/files/ground" class="button " style="height: 100px" >定场地</a>
+		</div>    
+  </ion-content>
+</ion-view>
