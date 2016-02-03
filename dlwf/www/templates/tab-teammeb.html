@@ -1,0 +1,29 @@
+<ion-view view-title="我的球队">
+	
+  <ion-nav-buttons side="right">
+	<button class="button button-clear button-light" ng-click="openPopover($event)">可约</button>
+  </ion-nav-buttons>
+	
+	
+  <ion-content lazy-scroll>		
+
+		
+ 	<ion-list>    	    	
+      <ion-item  ng-repeat="chat in members " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
+       	<div class="item-avatar ">	
+       		<img image-lazy-src="{{chat.pic}}">	     
+			<p><span style="float: left;"> {{chat.title}}</span> <span style="float: right;">{{chat.status}}</span> </p>
+			<p>&nbsp;</p>
+			<p>{{chat.pos}}</p>
+		</div>
+
+      </ion-item>
+    </ion-list> 
+  
+  	<!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>-->             
+    <!--<ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>-->
+    
+  </ion-content> 
+  
+</ion-view>
+

@@ -1,6 +1,6 @@
 <ion-view view-title="{{currentTab|stateName}}">
 	
-  <ion-nav-buttons side="left">
+  <ion-nav-buttons side="right">
 	<button class="button button-clear button-light" ng-click="openPopover($event)">区域</button>
   </ion-nav-buttons>
 	
@@ -12,10 +12,11 @@
       <ion-item  ng-repeat="chat in news " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
        	<div class="item-thumbnail-left ">	
        		<img image-lazy-src="{{chat.pic}}">	     
-        	<p>{{chat.title}}</p>
+        	<p><span style="float: left;"> {{chat.title}}</span> <span style="float: right;">室外</span> </p>
         	<div align="right">
-        		<p>{{chat.id}}</p>            		
+        		<p>{{chat.state}}</p>            		
         	</div>
+        	<p><span style="float: left;"> {{chat.price}}</span> <span style="float: right; color: #FF3B30;">特惠8折</span> </p>
 		</div>
 
       </ion-item>

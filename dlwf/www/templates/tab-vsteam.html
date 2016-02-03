@@ -1,0 +1,25 @@
+<ion-view view-title="球队排行">
+		
+  <ion-content lazy-scroll>		
+
+		
+ 	<ion-list>    	    	
+      <ion-item  ng-repeat="chat in teams " style="padding-right: 8px;" href="#/tab/dash/{{chat.id}}">				
+       	<div class="item-thumbnail-left ">	
+       		<img image-lazy-src="{{chat.pic}}">	     
+        	<p><span style="float: left;"> {{chat.title}}</span> <span style="float: right;">{{chat.members}}人</span> </p>
+	        <p><span style="float: left;"> {{chat.state}}</span> <span style="float: right;">{{chat.stars}}</span> </p>            		
+			<p><span style="float: left;"> 积分:{{chat.score}}</span> <span style="float: right;">胜平负:{{chat.win}} {{chat.draw}} {{chat.loss}}</span> </p> 
+			<p><span style="float: left;"> 已认证</span> <span style="float: right;">可约</span> </p>
+		</div>
+
+      </ion-item>
+    </ion-list> 
+  
+  	<!--<ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()"></ion-refresher>-->             
+    <!--<ion-infinite-scroll on-infinite="loadMore()" distance="1%" ng-if="moreDataCanBeLoaded()"></ion-infinite-scroll>-->
+    
+  </ion-content> 
+  
+</ion-view>
+
