@@ -376,6 +376,39 @@ angular.module('starter.controllers', [])
 })
 
 
+
+.controller('VsteamCtrl', function($rootScope, $scope, Teams) {
+	
+	$scope.$on('$ionicView.beforeEnter', function() {
+      $rootScope.hideTabs = 'tabs-item-hide';
+	});	
+
+	$scope.teams = Teams.all();
+
+})
+
+.controller('TeammebCtrl', function($rootScope, $scope, Mbers) {
+	
+	$scope.$on('$ionicView.beforeEnter', function() {
+      $rootScope.hideTabs = 'tabs-item-hide';
+	});	
+	
+	$scope.members = Mbers.all();
+
+})
+
+
+.controller('AccessCtrl', function($rootScope, $scope, Mbers) {
+	
+	$scope.$on('$ionicView.beforeEnter', function() {
+      $rootScope.hideTabs = 'tabs-item-hide';
+	});	
+	
+	$scope.members = Mbers.all();
+
+})
+
+
 .controller('GroundCtrl', function($rootScope, $scope, $http, $ionicPopover, $ionicSlideBoxDelegate, $ionicListDelegate, Grounds, States, Grds) {
   
   	$scope.news = Grds.all();

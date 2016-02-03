@@ -17,15 +17,36 @@
 				</div>        	        	
       </ion-item>      
     </ion-list>-->
-  <ion-content scroll>    
-		<div class="button-bar" style="padding-top: 49px;">
-  		<a  class="button " style="height: 100px" >球队状态</a>
+  <ion-content scroll> 
+  	
+  	  	<ion-slide-box class="slidebox" show-pager="true"  auto-play="true" does-continue="true" slide-interval="4000">
+			<ion-slide>
+		    <!--<a href="#/tab/chats/confer" class="button button-square button-giant" style="width: 100%; height: 128px">大连周末足球</a>-->	
+		  	<img image-lazy-src="" style="width: 100%; height: 140px" >
+			</ion-slide>
+		  <ion-slide>
+		  	<img image-lazy-src="" style="width: 100%; height: 140px" >
+		  </ion-slide>
+		  <ion-slide>
+		    <img image-lazy-src="" style="width: 100%; height: 140px" >
+		  </ion-slide>		  
+		</ion-slide-box>
+  	
+		<div class="button-bar">
+		  	<a href="#/tab/files/access" class="button " style="height: 45px" >马上注册球队</a>
+		</div> 	
+  	
+		<div class="button-bar" style="padding-top: 5px;">
+  			<a  href="#/tab/files/teammeb" class="button " style="height: 100px" >球队状态</a>
 		</div>
+		
 		<div class="button-bar" style="padding-top: 5px;">
-  		<a class="button " style="height: 100px" >约对手</a>
-		</div>    
+  			<a href="#/tab/files/vsteam" class="button " style="height: 100px" >约对手</a>
+		</div>  
+		
 		<div class="button-bar" style="padding-top: 5px;">
-  		<a href="#/tab/files/ground" class="button " style="height: 100px" >定场地</a>
-		</div>    
+  			<a href="#/tab/files/ground" class="button " style="height: 100px" >定场地</a>
+		</div>  
+		
   </ion-content>
 </ion-view>

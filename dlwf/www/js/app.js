@@ -170,9 +170,39 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','i
         controller: 'GroundCtrl'
       }
     }
+  })
+  	
+  .state('tab.vsteam', {
+    url: '/files/vsteam',
+    views: {
+      'tab-files': {
+        templateUrl: 'templates/tab-vsteam.html',
+        controller: 'VsteamCtrl'
+      }
+    }
+  })
+  
+   .state('tab.access', {
+    url: '/files/access',
+    views: {
+      'tab-files': {
+        templateUrl: 'templates/tab-team-access.html',
+        controller: 'AccessCtrl'
+      }
+    }
+  }) 
+  
+  .state('tab.teammeb', {
+    url: '/files/teammeb',
+    views: {
+      'tab-files': {
+        templateUrl: 'templates/tab-teammeb.html',
+        controller: 'TeammebCtrl'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/tab/files');
 
 });

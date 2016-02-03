@@ -1,9 +1,30 @@
-<ion-view view-title="我的">
-  <ion-content>
+<ion-view view-title="我的球队">
+  <ion-content scroll>
+  	
+  	<h2 style="text-align: center; background-color: #4CD964;">孙家沟联队<br>★★★★★</h2>
+  	<img ng-src="img/1.png" style="padding-top: 0px; margin-top: 0px; width: 100%; height: 30%" />
+  	
+		<!--<div style="position:relative">
+		 	<div style="position:absolute; left:120px ; top:0; color:#FFF; font-weight:bold">孙家沟联队</div> 
+		 	<img  ng-src="img/1.png" style="width: 100%; height: 30%"> 
+		</div>   	-->
+  	
+  	
+  	<div class="button-bar" style="padding-top: 5px;">
+  		<a  href="" class="button button-large button-outline" >球队管理</a>
+		</div>
+		
+  	<div class="button-bar" style="padding-top: 5px;">
+  		<a  href="" class="button button-outline" >胜<br>15</a>	
+  		<a  href="" class="button button-outline" >平<br>3</a>
+   		<a  href="" class="button button-outline" >负<br>6</a> 		
+		</div>		
+  	
     <ion-list>
     <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
+        我的状态：休战/待战
     </ion-toggle>
     </ion-list>
+    
   </ion-content>
 </ion-view>
